@@ -1,0 +1,94 @@
+.footer {
+  background: var(--black-color);
+  color: var(--lightwhite-color);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+    padding: 40px 136px 12px 136px;
+
+}
+
+.footer-box h3 {
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.footer-box h2 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 400;
+}
+.footer-box p {
+  margin: 6px 0;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.footer-box input {
+  background-color: transparent;
+  border: none;
+  width: 100px;
+}
+
+.qr {
+  width: 70px;
+  height: 70px;
+}
+
+.social span {
+  margin-right: 17px;
+}
+.social {
+  margin-top: 10px;
+}
+
+.copyright {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.5;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-width: 100%;
+  padding: 15px 0;
+}
+.input-align {
+  width: 130px;
+  height: auto;
+  display: flex;
+  background-color: transparent;
+  color: var(--lightwhite-color);
+  border: 1px solid var(--lightwhite-color);
+  border-radius: 3%;
+  align-items: center;
+  gap: 10px;
+  padding: 3px 8px;
+}
+.footer-box input::placeholder {
+  font-size: 12px;
+  font-weight: 200;
+}
+.socialapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.download {
+  width: 90px;
+  height: auto;
+}
+.navigationup{
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 30px;
+  justify-items: end;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 99;
+}

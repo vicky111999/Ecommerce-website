@@ -1,0 +1,73 @@
+.gridalign {
+  display: grid;
+  width: 78.5%;
+  height: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  margin-left: 135px;
+}
+.item1 {
+  position: relative;
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: var(--black-color);
+}
+.item2 {
+  grid-column: span 2;
+  background-color: var(--lightblack-color);
+  padding-left: 16px;
+}
+
+.item3,
+.item4 {
+  position: relative;
+  background-color: var(--black-color);
+  padding: 20px;
+}
+.titelcard {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--lightwhite-color);
+}
+.description {
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--lightwhite-color);
+  width: 240px;
+}
+.carddetail1,
+.carddetail3,
+.carddetail4 {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
+.card-img1,
+.card-img3,
+.card-img4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.item2 {
+  display: flex;
+}
+.carddetail2 {
+  order: 1;
+  flex: 1;
+  align-content: center;
+}
+.card-img2 {
+  order: 2;
+  width: 50%;
+}
+
+.item1 a,
+.item2 a,
+.item3 a,
+.item4 a {
+  color: var(--lightwhite-color);
+  font-size: 12px;
+  font-weight: 300;
+}

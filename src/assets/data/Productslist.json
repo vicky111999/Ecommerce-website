@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "img": "https://www.petlers.com/wp-content/uploads/2024/11/1506_front.png",
+    "tittle": "Breed Dry Dog Food",
+    "price": "$100",
+    "rating": 2,
+    "color": ["yellow", "red"]
+  },
+  {
+    "id": 2,
+    "img": "https://example.com/images/dogfood2.png",
+    "tittle": "Premium Puppy Food",
+    "price": "$120",
+    "rating": 4,
+    "color": ["blue", "white"]
+  },
+  {
+    "id": 3,
+    "img": "https://example.com/images/dogfood3.png",
+    "tittle": "Healthy Adult Dog Food",
+    "price": "$95",
+    "rating": 3,
+    "color": ["green", "yellow"]
+  },
+  {
+    "id": 4,
+    "img": "https://example.com/images/dogfood4.png",
+    "tittle": "Grain Free Dog Food",
+    "price": "$150",
+    "rating": 5,
+    "color": ["black", "orange"]
+  },
+  {
+    "id": 5,
+    "img": "https://example.com/images/dogfood5.png",
+    "tittle": "Organic Dog Meal",
+    "price": "$130",
+    "rating": 4,
+    "color": ["brown", "green"]
+  },
+  {
+    "id": 6,
+    "img": "https://example.com/images/dogfood6.png",
+    "tittle": "High Protein Dog Food",
+    "price": "$110",
+    "rating": 5,
+    "color": ["red", "black"]
+  },
+  {
+    "id": 7,
+    "img": "https://example.com/images/dogfood7.png",
+    "tittle": "Senior Dog Nutrition",
+    "price": "$90",
+    "rating": 3,
+    "color": ["purple", "white"]
+  },
+  {
+    "id": 8,
+    "img": "https://example.com/images/dogfood8.png",
+    "tittle": "Natural Chicken Dog Food",
+    "price": "$105",
+    "rating": 4,
+    "color": ["yellow", "green"]
+  },
+  {
+    "id": 9,
+    "img": "https://example.com/images/dogfood9.png",
+    "tittle": "Beef Flavor Dog Food",
+    "price": "$115",
+    "rating": 2,
+    "color": ["brown", "red"]
+  },
+  {
+    "id": 10,
+    "img": "https://example.com/images/dogfood10.png",
+    "tittle": "Complete Balanced Dog Food",
+    "price": "$140",
+    "rating": 5,
+    "color": ["blue", "black"]
+  }
+]

@@ -1,0 +1,153 @@
+.imgpath img {
+  width: 150px;
+  height: 100px;
+}
+
+.imgpath {
+  position: relative;
+  background-color: var(--lightgrey-color);
+  width: 242px;
+  height: 242px;
+}
+.card {
+  display: flex;
+  width: 79%;
+  gap: 10px;
+  margin-left: 130px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.card::-webkit-scrollbar {
+  display: none;
+}
+.hoticon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.eyeicon {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+.imgurl {
+  position: absolute;
+  top: 30%;
+  left: 12%;
+}
+.title {
+  color: var(--black-color);
+  font-size: 13px;
+  font-weight: 500;
+}
+.price p {
+  color: var(--pink-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+.price {
+  color: var(--pink-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+.price del {
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 300;
+}
+.addbtn {
+  display: none;
+}
+.imgpath:hover .addbtn {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+}
+.offer {
+  position: absolute;
+  width: 35px;
+  height: 17px;
+  background-color: var(--pink-color);
+  border-radius: 15%;
+  top: 8px;
+  left: 8px;
+  color: var(--lightwhite-color);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+.offer1 {
+  position: absolute;
+  width: 35px;
+  height: 17px;
+  background-color: var( --lightgreen-color);
+  border-radius: 15%;
+  top: 8px;
+  left: 8px;
+  color: var(--lightwhite-color);
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+.pricing p {
+  color: var(--pink-color);
+  font-weight:500;
+  display: inline;
+}
+.pricing{
+  display: inline;
+}
+.radio {
+  display: flex;
+  gap: 8px;
+}
+.cardalign {
+  margin-top: 20px;
+  text-decoration: none;
+}
+.singlecard{
+  width: 100%;
+  height: auto;
+  padding-top: 200px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+.singlecard .imgpath {
+  position: relative;
+  background-color: var(--lightgrey-color);
+  width: 100%;
+  height: 242px;
+}
+.singlecard .imgpath img {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 35%;
+  top: 8%;
+}
+.errorthrow{
+  padding-top: 150px;
+}
+.loader{
+  padding-top: 150px;
+}
+.pricingnew p{
+   color: var(--pink-color);
+  font-weight:500;
+  display: inline;
+}
+.pricingnew{
+  display: inline;
+}
+.color-options{
+  display: inline;
+}

@@ -1,0 +1,64 @@
+.tittlecard1 {
+  display: flex;
+  padding: 50px 0 20px 130px;
+  justify-content: space-between;
+}
+.saletype{
+  margin-top: 15px;
+}
+.bar2 {
+  position: relative;
+  color: var(--orange-color);
+  font-size: 16px;
+  font-weight: 600;
+  text-indent: 25px;
+}
+.bar2::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 14px;
+  left: 0;
+  top: -3px;
+  background-color: var(--orange-color);
+  border-radius: 18%;
+}
+.tittlecard1 .saletype {
+  font-weight: 600;
+  font-size: 36px;
+}
+.datetime  {
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 300px;
+  margin-top: 25px;
+}
+.datetime {
+  display: flex;
+  gap: 30px;
+}
+.datetime .date {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+}
+.datetime .times {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.arrow {
+ padding-right: 138px;
+ margin-top: 25px;
+}
+.datetime .colon:not(:last-child) .date::after {
+  content: ":";
+  position: absolute;
+  top: -2px;
+  right: -18px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.date {
+  display: inline;
+}

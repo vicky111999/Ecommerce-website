@@ -1,0 +1,11 @@
+
+.swiper {
+  width: 59%;
+  margin: 30px 0 0  30px;
+  background-color: black;
+  color: white;
+}
+.swiper-slide{
+     background-color: black;
+     padding-top: 45px;
+}

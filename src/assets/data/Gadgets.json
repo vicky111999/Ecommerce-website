@@ -1,0 +1,27 @@
+ [
+    {
+        "id":1,
+        "img":"https://cdn-icons-png.freepik.com/512/9034/9034122.png",
+        "title":"Phones"
+    },{
+        "id":2,
+        "img":"https://media.lordicon.com/icons/wired/outline/478-computer-display.svg",
+        "title":"Computers"
+    },{
+        "id":3,
+        "img":"https://cdn-icons-png.flaticon.com/512/617/617666.png",
+        "title":"SmartWatch"
+    },{
+        "id":4,
+        "img":"https://www.freeiconspng.com/uploads/camera-icon-21.png",
+        "title":"Camera"
+    },{
+        "id":5,
+        "img":"https://cdn-icons-png.flaticon.com/512/502/502690.png",
+        "title":"HeadPhones"
+    },{
+        "id":6,
+        "img":"https://cdn-icons-png.flaticon.com/512/686/686589.png",
+        "title":"Gaming"
+    }
+]

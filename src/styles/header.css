@@ -1,0 +1,118 @@
+@media (min-width: 320px) {
+  .headermain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 48px;
+    padding: 0 10px;
+    position:fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  .salesbanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .headermainsplit {
+    display: flex;
+    align-items: center;
+  }
+  .headermainsplit p {
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+  }
+  /* .selection{
+     display: flex;
+    flex-direction: column-reverse;
+  } */
+  .headermainsplit a {
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+
+  }
+  .headermainsplit select {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 12px;
+  }
+  .headermainsplit option {
+    color: black;
+  }
+}
+@media (min-width: 768px) {
+  .headermainsplit p {
+    font-weight: 500;
+    font-size: 12px;
+    padding-left: 100px;
+  }
+  .headermainsplit a {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .headermainsplit {
+    gap: 70px;
+  }
+  .headermainsplit select {
+    font-weight: 300;
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .salesbanner {
+    gap: 6px;
+  }
+  .headermainsplit p {
+    font-size: 12px;
+    font-weight: 200;
+    padding-left: 130px;
+  }
+  .headermainsplit a {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .headermainsplit {
+    gap: 130px;
+  }
+  .headermainsplit select {
+    font-weight: 300;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .headermainsplit p {
+    font-size: 15px;
+    padding-left: 130px;
+  }
+  .salesbanner {
+    gap: 10px;
+  }
+  .headermainsplit {
+    gap: 140px;
+  }
+  .headermainsplit select {
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  .headermainsplit p {
+    padding-left: 200px;
+  }
+  .headermainsplit select {
+    font-weight: 500;
+  }
+}
+@media (min-width: 1440px) {
+  .headermainsplit p {
+    padding-left: 300px;
+  }
+  .headermainsplit select {
+    font-weight: 500;
+  }
+}

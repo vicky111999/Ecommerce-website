@@ -1,0 +1,40 @@
+
+.target1 {
+  display: flex;
+  gap: 20px;
+}
+.target1 .bar11 {
+  height: 25px;
+  width: 13px;
+  background-color: var(--orange-color);
+  border-radius: 20%;
+  display: inline;
+  justify-items: center;
+}
+.bar21 {
+  color: var(--orange-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+.tittlecard11 .saletype1 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.arrow1 {
+  margin-left: 278px;
+  display: flex;
+  gap: 10px;
+}
+.splitdate1 {
+  display: flex;
+  align-items: center;
+   display: flex;
+  width: 89%;
+  gap: 250px;
+  padding-top:15px;
+}
+.splitdate1 .saletype1 {
+  font-weight: 600;
+  font-size: 36px;
+}
