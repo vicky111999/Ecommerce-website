@@ -5,17 +5,15 @@ const Tittlecard = ({ items, title, rightcomponent, date}) => {
     <>
       <div className="tittlecard1">
         <div className="target">
-            <p className="bar2">{items}</p>
+            <p className="bar2 ">{items}</p>
           <p className="saletype">{title}</p>
         </div>
-        {/* <div className="splitdate"> */}
           <div className="datetime">
            {date}
           </div>
           <div className="arrow">
            {rightcomponent}
           </div>
-        {/* </div> */}
       </div>
     </>
   );

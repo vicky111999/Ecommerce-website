@@ -2,7 +2,6 @@ import React from "react";
 import { Editbutton, Eyeicon, Hoticon, Rating } from "./Svgcom";
 import { Link, useNavigate } from "react-router-dom";
 
-
 const Card = ({
   item,
   itemIndex,
@@ -11,10 +10,12 @@ const Card = ({
   classname6,
   cardalign,
 }) => {
-  const navigate = useNavigate()
-  const editpage=()=>{
-    navigate (`/updateproduct/${item.id}`,{state:item})
-  }
+  const navigate = useNavigate();
+  const editpage = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate(`/updateproduct/${item.id}`, { state: item });
+  };
   return (
     <>
       <Link key={itemIndex} className={cardalign} to={`/products/${item?.id}`}>
@@ -32,7 +33,9 @@ const Card = ({
           <div className="eyeicon">
             <Eyeicon />
           </div>
-          <button onClick={editpage}><Editbutton/></button>
+          <button onClick={editpage} className="border-0 bg-transparent z-3">
+            <Editbutton />
+          </button>
           <img className="imgurl" src={item?.image} alt="console"></img>
           <button className="addbtn">Add To Cart</button>
         </div>

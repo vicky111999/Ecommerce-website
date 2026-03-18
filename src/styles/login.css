@@ -13,15 +13,26 @@ form {
   background-color: #d3d3d3;
   border-radius: 2%;
 }
-.formcard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    background-color: #d3d3d3;
-    border-radius: 2%;
-    margin: 10px 0 10px 0;
+.floatingform{
+  display: flex;
+  flex-direction: column;
 }
+.formcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  background-color: #d3d3d3;
+  border-radius: 2%;
+  margin: 10px 0 10px 0;
+  width: 75%;
+}
+.productalign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 .formcard .alignment {
   display: flex;
   justify-content: space-between;

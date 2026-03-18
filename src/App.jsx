@@ -9,10 +9,12 @@ import Login from "./pages/Login.jsx";
 import Protectedroute from "./Components/Protectedroute.jsx";
 import Addproduct from "./pages/Addproduct.jsx";
 import Updateproduct from "./pages/Updateproduct.jsx";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
     <>
+    <ToastContainer/>
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="*" element={<Login/>}></Route>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Productcrud = ({ event }) => {
   const location = useLocation();
@@ -74,7 +75,7 @@ const Productcrud = ({ event }) => {
         else if (!response.ok && response.status) {
           responsetab.error = "Unexpected error";
         } else if (response.ok && response.status == "200") {
-          responsetab.res = "Product successfully Updated";
+          toast.success("Product successfully Updated");
         }
         setResult(responsetab);
         return;
@@ -85,12 +86,13 @@ const Productcrud = ({ event }) => {
       setLoading(false);
     }
   };
-  useEffect(()=>{
-    if(result.error || result.res){
-    setTimeout(() => {
-      document.getElementById('popupresponse').style.display ='none'
-    }, 5000);}
-  },[result.error,result.res])
+  useEffect(() => {
+    if (result.error || result.res) {
+      setTimeout(() => {
+        document.getElementById("popupresponse").style.display = "none";
+      }, 5000);
+    }
+  }, [result.error, result.res]);
   return (
     <form onSubmit={handlesend}>
       <div className="formcard">
@@ -104,76 +106,91 @@ const Productcrud = ({ event }) => {
         >
           <p style={{ fontWeight: "400" }}>{result.res}</p>
         </div>
-        <div class="form-floating mb-3">
-          <input
-            class="form-control"
-            id="floatingInput"
-            type="text"
-            name="title"
-            value={formdata?.title}
-            onChange={handlechange}
-            placeholder="Enter Title"
-          ></input>
-          <label for="floatingInput">Title</label>
+        <div className="productalign">
+          <div className="floatingform">
+            <div class="form-floating mb-3">
+              <input
+                class="form-control"
+                id="floatingInput"
+                type="text"
+                name="title"
+                value={formdata?.title}
+                onChange={handlechange}
+                placeholder="Enter Title"
+              ></input>
+              <label for="floatingInput">Title</label>
+            </div>
+            {error.title && (
+              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
+                {error.title}
+              </p>
+            )}
+          </div>
+          <div className="floatingform">
+            <div class="form-floating mb-3">
+              <input
+                class="form-control"
+                id="floatingInput"
+                type="number"
+                name="price"
+                min="1"
+                value={formdata?.price}
+                onChange={handlechange}
+                placeholder="Enter price"
+              ></input>
+              <label for="floatingInput">Price</label>
+            </div>
+            {error.price && (
+              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
+                {error.price}
+              </p>
+            )}
+          </div>
         </div>
-        {error.title && (
-          <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-            {error.title}
-          </p>
-        )}
-        <div class="form-floating mb-3">
-          <input
-            class="form-control"
-            id="floatingInput"
-            type="number"
-            name="price"
-            min="1"
-            value={formdata?.price}
-            onChange={handlechange}
-            placeholder="Enter price"
-          ></input>
-          <label for="floatingInput">Price</label>
+        <div className="productalign">
+          <div className="floatingform">
+            <div class="form-floating mb-3">
+              <input
+                class="form-control"
+                id="floatingInput"
+                type="text"
+                name="description"
+                value={formdata?.description}
+                onChange={handlechange}
+                placeholder="Enter description"
+              ></input>
+              <label for="floatingInput">Description</label>
+            </div>
+            {error.description && (
+              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
+                {error.description}
+              </p>
+            )}
+          </div>
+          <div>
+            <div className="floatingform">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="floatingInput"
+                  type="text"
+                  name="category"
+                  value={formdata?.category}
+                  onChange={handlechange}
+                  placeholder="Enter category"
+                ></input>
+                <label for="floatingInput">Category</label>
+              </div>
+              {error.category && (
+                <p
+                  style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}
+                >
+                  {error.category}
+                </p>
+              )}
+            </div>
+          </div>
         </div>
-        {error.price && (
-          <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-            {error.price}
-          </p>
-        )}
-
-        <div class="form-floating mb-3">
-          <input
-            class="form-control"
-            id="floatingInput"
-            type="text"
-            name="description"
-            value={formdata?.description}
-            onChange={handlechange}
-            placeholder="Enter description"
-          ></input>
-          <label for="floatingInput">Description</label>
-        </div>
-        {error.description && (
-          <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-            {error.description}
-          </p>
-        )}
-        <div class="form-floating mb-3">
-          <input
-            class="form-control"
-            id="floatingInput"
-            type="text"
-            name="category"
-            value={formdata?.category}
-            onChange={handlechange}
-            placeholder="Enter category"
-          ></input>
-          <label for="floatingInput">Category</label>
-        </div>
-        {error.category && (
-          <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-            {error.category}
-          </p>
-        )}
         <div class="form-floating mb-3">
           <input
             class="form-control"

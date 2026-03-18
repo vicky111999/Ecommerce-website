@@ -29,19 +29,19 @@ const Home = () => {
     return (
       <>
         <div className="colon">
-          <p className="times">Days</p>
+          <p className="times m-0">Days</p>
           <p className="date">{timer?.d}</p>
         </div>
         <div className="colon">
-          <p className="times">Hours</p>
+          <p className="times m-0">Hours</p>
           <p className="date"> {timer?.h}</p>
         </div>
         <div className="colon">
-          <p className="times">Minutes</p>
+          <p className="times m-0">Minutes</p>
           <p className="date"> {timer?.m}</p>
         </div>
         <div className="colon">
-          <p className="times">Seconds</p>
+          <p className="times m-0">Seconds</p>
           <p className="date">{timer?.s}</p>
         </div>
       </>
@@ -70,7 +70,7 @@ const Home = () => {
       <main>
         <div className="split1">
           <div className="saidcontent">
-            <ul>
+            <ul className="m-0">
               <li className="svg1">
                 <a href="#">Women's Fashion</a>
                 <svg
