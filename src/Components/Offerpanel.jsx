@@ -10,44 +10,42 @@ const Offerpanel = ({ items, classname, classname1,timer }) => {
             <div key={items?.id}>
               <div className="main1">
                 <div>
-                  <p className="title1">{items?.title}</p>
+                  <p className="title1 m-0">{items?.title}</p>
                 </div>
                 <div>
-                  <p className="content">{items?.content}</p>
+                  <p className="content m-0">{items?.content}</p>
                 </div>
               </div>
               <div className="aligncircle">
                 <div className="circle">
-                  <p className="hours">
+                  <div className="hours">
                     {timer?.h}
-                  
-                      <p className="hoursname">{items.hourname}</p>
-                   
-                  </p>
+                      <p className="hoursname m-0">{items.hourname}</p>
+                  </div>
                 </div >
                 <div className="circle">
-                  <p className="days">
+                  <div className="days">
                     {timer?.d}
                     <div>
-                      <p className="daysname">{items.daysname}</p>
+                      <p className="daysname m-0">{items.daysname}</p>
                     </div>
-                  </p>
+                  </div>
                 </div>
                 <div className="circle">
-                  <p className="minutes">
+                  <div className="minutes">
                     {timer?.m}
                     <div>
-                      <p className="minutesname">{items.minutesname}</p>
+                      <p className="minutesname m-0">{items.minutesname}</p>
                     </div>
-                  </p>
+                  </div>
                 </div>
                 <div className="circle">
-                  <p className="seconds">
+                  <div className="seconds">
                     {timer?.s}
                     <div>
-                      <p className="secondsname">{items.secondsname}</p>
+                      <p className="secondsname m-0">{items.secondsname}</p>
                     </div>
-                  </p>
+                  </div>
                 </div>
               </div>
               <div>

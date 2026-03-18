@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="ecom-navbar">
         <div className="ecom-navbarsplit">
           <strong>Exclusive</strong>
-          <ul>
+          <ul class="m-0">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -44,7 +44,6 @@ const Navbar = () => {
                 />
               </svg>
             </div>
-            {/* <div className="favourite"> */}
               <svg
                 width="32"
                 height="32"

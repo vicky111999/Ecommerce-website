@@ -14,7 +14,7 @@ const ProductList = ({
   return (
     <>
       <div
-        className="card"
+        className="wrapcard"
         style={{
           flexWrap: flexbo ? "wrap" : "nowrap",
         }}

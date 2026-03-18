@@ -1,11 +1,6 @@
 @media (min-width: 320px) {
-  .ecom-navbarsplit ul li a { 
+  .ecom-navbarsplit ul li a {
     display: none;
-  }
-  .ecom-navbarsplit strong {
-    font-weight: 800;
-    font-style: Bold;
-    font-size: 17px;
   }
   .favourite {
     display: flex;
@@ -14,47 +9,18 @@
     width: 20px;
     height: 20px;
   }
-  .inputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .ecom-navbarsplit input {
     border: none;
     background-color: transparent;
     width: 100px;
     height: 20px;
   }
-  .inputsplit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    background-color: #f5f5f5;
-    border: none;
-  }
   .ecom-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0 5px 0;
-    border-bottom: 1px solid black;
     position: fixed;
     width: 100%;
-    padding-top: 55px;
-    background-color: white ;
+    top: 40px;
+    background-color: white;
     z-index: 999;
-  }
-  .ecom-navbarsplit {
-    display: flex;
-    align-items: center;
-    gap: 2%;
-  }
-  .ecom-navbarsplit ul li {
-    list-style-type: none;
-  }
-  .ecom-navbarsplit ul {
-    display: flex;
   }
 }
 @media (min-width: 768px) {
@@ -67,11 +33,6 @@
     text-decoration: none;
     display: block;
   }
-  .ecom-navbarsplit strong {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 20px;
-  }
   .ecom-navbarsplit ul li a:focus {
     text-decoration: underline;
   }
@@ -87,45 +48,11 @@
     width: 30px;
     height: 40px;
   }
-  .inputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:20px;
-  }
   .ecom-navbarsplit input {
     border: none;
     background-color: transparent;
-    width: 100px;
+    width: 150px;
     height: 15px;
-  }
-  .inputsplit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px; 
-    padding: 1px 6px 2px 12px;
-    background-color: #f5f5f5;
-    border: none;
-  }
-  .ecom-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0 5px 0;
-    border-bottom: 1px solid black;
-    padding-top: 55px;
-  }
-  .ecom-navbarsplit {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
-  .ecom-navbarsplit ul li {
-    list-style-type: none;
-  }
-  .ecom-navbarsplit ul {
-    display: flex;
   }
 }
 @media (min-width: 992px) {
@@ -136,13 +63,6 @@
     font-size: 16px;
     color: black;
   }
-  .ecom-navbarsplit strong {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 3%;
-  }
   .ecom-navbarsplit ul li a:focus {
     text-decoration: underline;
   }
@@ -151,55 +71,11 @@
     padding-left: 10px;
     gap: 5px;
   }
-  .ecom-navbarsplit svg {
-    width: 30px;
-    height: 20px;
-  }
-  .inputs svg {
-    width: 30px;
-    height: 40px;
-  }
-  .inputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .ecom-navbarsplit input {
     border: none;
     background-color: transparent;
     width: 135px;
     height: 25px;
-  }
-  .inputsplit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 175px;
-    height: 25px;
-    border-radius: 4px;
-    padding: 3px 9px 3px 15px;
-    background-color: #f5f5f5;
-    border: none;
-    gap: 10px;
-  }
-  .ecom-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 35px 0 8px 0;
-    border-bottom: 1px solid black;
-    padding-top: 70px;
-  }
-  .ecom-navbarsplit {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-  }
-  .ecom-navbarsplit ul li {
-    list-style-type: none;
-  }
-  .ecom-navbarsplit ul {
-    display: flex;
   }
 }
 @media (min-width: 1280px) {
@@ -211,7 +87,6 @@
   }
   .ecom-navbarsplit strong {
     font-weight: 700;
-    font-style: Bold;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3%;
@@ -224,13 +99,9 @@
     padding-left: 10px;
     gap: 30px;
   }
-  .ecom-navbarsplit svg {
-    width: 30px;
-    height: 20px;
-  }
   .inputs svg {
     width: 30px;
-    height: 40px;
+    height: 25px;
   }
   .inputs {
     display: flex;
@@ -241,8 +112,11 @@
   .ecom-navbarsplit input {
     border: none;
     background-color: transparent;
-    width: 135px;
+    width: 125px;
     height: 25px;
+  }
+  .ecom-navbarsplit input::placeholder{
+    font-size: 12px;
   }
   .inputsplit {
     display: flex;
@@ -254,7 +128,7 @@
     padding: 3px 9px 3px 15px;
     background-color: #f5f5f5;
     border: none;
-    gap: 30px;
+    gap: 10px;
   }
   .ecom-navbar {
     display: flex;
@@ -262,11 +136,10 @@
     align-items: center;
     padding: 40px 0 10px 0;
     border-bottom: 1px solid black;
-    padding-top: 80px;
   }
   .ecom-navbarsplit {
     display: flex;
-    gap:45px;
+    gap: 45px;
     align-items: center;
   }
   .ecom-navbarsplit ul li {
@@ -277,13 +150,10 @@
   }
 }
 
-@media(min-width:1440px){
-    .ecom-navbarsplit {
+@media (min-width: 1440px) {
+  .ecom-navbarsplit {
     display: flex;
-    gap:90px;
+    gap: 90px;
     align-items: center;
-  } 
-  .ecom-navbar{
-    padding-top: 80px;
   }
 }

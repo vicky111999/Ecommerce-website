@@ -3,8 +3,7 @@ import "../styles/footer.css";
 import qrcode from "../assets/Qr-Code.png";
 import googleplay from "../assets/GooglePlay.png";
 import applestore from "../assets/appstore.png";
-import { Homepagenavi } from "./Svgcom";
-import ScrollButton from "./ScrollButton";
+
 
 const Footer = () => {
   return (
@@ -64,7 +63,7 @@ const Footer = () => {
             <p>Save $3 with App New User Only</p>
             <div className="socialapp">
               <img src={qrcode} alt="qr" className="qr"></img>
-              <div>
+              <div className="downloader">
                 <img
                   src={googleplay}
                   alt="googlestore"
@@ -157,9 +156,8 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          {/* <ScrollButton /> */}
         </div>
-        <p className="copyright">© Copyright 2025. All rights reserved</p>
+        <p className="copyright m-0">© Copyright 2025. All rights reserved</p>
       </footer>
     </>
   );

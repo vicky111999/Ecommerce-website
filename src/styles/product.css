@@ -9,7 +9,7 @@
   width: 242px;
   height: 242px;
 }
-.card {
+.wrapcard {
   display: flex;
   width: 79%;
   gap: 10px;
@@ -17,7 +17,7 @@
   overflow-y: scroll;
   scrollbar-width: none;
 }
-.card::-webkit-scrollbar {
+.wrapcard::-webkit-scrollbar {
   display: none;
 }
 .hoticon {

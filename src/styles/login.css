@@ -1,0 +1,66 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #e0ffff;
+}
+.form-card {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px;
+  background-color: #d3d3d3;
+  border-radius: 2%;
+}
+.formcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: #d3d3d3;
+    border-radius: 2%;
+    margin: 10px 0 10px 0;
+}
+.formcard .alignment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.form-card label,
+.formcard label {
+  font-size: 15px;
+  font-weight: bold;
+}
+.form-card input,
+.formcard input {
+  border: none;
+  border-radius: 3%;
+  font-size: 15px;
+  font-weight: 200;
+}
+.form-card input::placeholder,
+.formcard input::placeholder {
+  font-size: 12px;
+  font-weight: 500;
+}
+.errorshow {
+  color: #ff0000;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+.form-card button,
+.formcard button {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #008000;
+  border: none;
+  border-radius: 3%;
+}
+.form-card button:hover,
+.formcard button:hover {
+  opacity: 80%;
+}

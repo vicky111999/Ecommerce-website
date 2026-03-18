@@ -1,0 +1,4 @@
+.titlecard{
+    display: flex;
+    flex-direction: column;
+}

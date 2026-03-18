@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Components/Card";
 import { useParams } from "react-router-dom";
-// import { useLocation } from "react-router-dom";
 
 const SingleCard = () => {
   const [data, setData] = useState();
@@ -20,7 +19,6 @@ const SingleCard = () => {
         
         return response.json();
       })
-      // .then((res) => res.json() )
       .then((json) =>
         setTimeout(() => {
           setData(json);
@@ -28,7 +26,6 @@ const SingleCard = () => {
       )
       .catch((err) => setError(err));
   }, [api, id]);
-  // console.log(data);
   return (
     <>
       {error ? (

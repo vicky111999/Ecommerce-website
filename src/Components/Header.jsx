@@ -7,7 +7,7 @@ const Header = () => {
       <header className="headermain">
         <div className="headermainsplit">
           <div className="salesbanner">
-            <p>
+            <p className="m-0">
               Summer Sale For All Swim Suits And Free Express Delivery - OFF
               50%!
             </p>

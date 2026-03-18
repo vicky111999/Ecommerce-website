@@ -10,11 +10,9 @@ const Layout = () => {
     <>
       <div>
         <Header />
-        <Navbar/>
-        <main>
-          <Outlet />
-        </main>
-        <ScrollButton/>
+        <Navbar />
+        <Outlet />
+        <ScrollButton />
         <Footer />
       </div>
     </>
