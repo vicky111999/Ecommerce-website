@@ -11,7 +11,9 @@ const Layout = () => {
       <div>
         <Header />
         <Navbar />
+        <main>
         <Outlet />
+        </main>
         <ScrollButton />
         <Footer />
       </div>

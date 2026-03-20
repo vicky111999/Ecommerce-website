@@ -1,9 +1,11 @@
-form {
+.formalign {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   background-color: #e0ffff;
+  height: 100vh;
 }
 .form-card {
   display: inline-flex;
@@ -13,7 +15,7 @@ form {
   background-color: #d3d3d3;
   border-radius: 2%;
 }
-.floatingform{
+.floatingform {
   display: flex;
   flex-direction: column;
 }
@@ -21,16 +23,16 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  background-color: #d3d3d3;
+  padding: 10px 160px;
+  background-color: #FFF;
   border-radius: 2%;
   margin: 10px 0 10px 0;
-  width: 75%;
+
 }
 .productalign {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 100px;
 }
 
 .formcard .alignment {
@@ -74,4 +76,35 @@ form {
 .form-card button:hover,
 .formcard button:hover {
   opacity: 80%;
+}
+.form-control.grouping-inputs {
+  background: transparent !important;
+  padding: 0rem 0.7rem 0 0.75rem;
+}
+.form-floating label {
+  padding-top: 2rem;
+}
+.form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 2.625rem;
+  padding-bottom: 0;
+}
+.form-floating > .form-control:focus {
+  padding-top: 2.625rem;
+}
+.floatingform p{
+  margin-bottom: 0;
+}
+.buttonalign{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.buttonalign .backicon{
+  background: transparent;
+  color: #000;
+  font-size: x-large;
+}
+.buttonalign :first-child{
+  font-size: 20px;
+  padding: 2px 30px;
 }

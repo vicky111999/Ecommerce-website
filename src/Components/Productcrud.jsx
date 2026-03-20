@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import React, {  useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Productcrud = ({ event }) => {
   const location = useLocation();
+  const navigate = useNavigate()
   const product = location?.state || "";
 
   const [result, setResult] = useState({});
@@ -26,7 +27,6 @@ const Productcrud = ({ event }) => {
       [e.target.name]: e.target.value,
     });
   };
-
   const handlesend = async (e) => {
     e.preventDefault();
     setError("");
@@ -86,13 +86,19 @@ const Productcrud = ({ event }) => {
       setLoading(false);
     }
   };
-  useEffect(() => {
-    if (result.error || result.res) {
-      setTimeout(() => {
-        document.getElementById("popupresponse").style.display = "none";
-      }, 5000);
-    }
-  }, [result.error, result.res]);
+  // useEffect(() => {
+  //   if (result.error || result.res) {
+  //     setTimeout(() => {
+  //       document.getElementById("popupresponse").style.display = "none";
+  //     }, 5000);
+  //   }
+  // }, [result.error, result.res]);
+  const handleback=(e)=>{
+    e.preventDefault()
+    e.stopPropagation();
+        navigate(-1)
+  }
+
   return (
     <form onSubmit={handlesend}>
       <div className="formcard">
@@ -110,7 +116,7 @@ const Productcrud = ({ event }) => {
           <div className="floatingform">
             <div class="form-floating mb-3">
               <input
-                class="form-control"
+                class="form-control grouping-inputs border-bottom "
                 id="floatingInput"
                 type="text"
                 name="title"
@@ -120,16 +126,14 @@ const Productcrud = ({ event }) => {
               ></input>
               <label for="floatingInput">Title</label>
             </div>
-            {error.title && (
-              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-                {error.title}
+              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold", visibility: error.title ? "visible" : "hidden" }}>
+                {error.title || " " }
               </p>
-            )}
           </div>
           <div className="floatingform">
             <div class="form-floating mb-3">
               <input
-                class="form-control"
+                class="form-control grouping-inputs border-bottom "
                 id="floatingInput"
                 type="number"
                 name="price"
@@ -140,18 +144,18 @@ const Productcrud = ({ event }) => {
               ></input>
               <label for="floatingInput">Price</label>
             </div>
-            {error.price && (
-              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-                {error.price}
+             
+              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold", visibility: error.price ? "visible" : "hidden" }}>
+                {error.price || " "}
               </p>
-            )}
+            
           </div>
         </div>
         <div className="productalign">
           <div className="floatingform">
-            <div class="form-floating mb-3">
+            <div class="form-floating  mb-3">
               <input
-                class="form-control"
+                class="form-control grouping-inputs border-bottom "
                 id="floatingInput"
                 type="text"
                 name="description"
@@ -161,17 +165,17 @@ const Productcrud = ({ event }) => {
               ></input>
               <label for="floatingInput">Description</label>
             </div>
-            {error.description && (
-              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-                {error.description}
+           
+              <p style={{ color: "red", fontSize: "12px", fontWeight: "bold", visibility: error.description ? "visible" : "hidden" }}>
+                {error.description || " "}
               </p>
-            )}
+            
           </div>
           <div>
             <div className="floatingform">
               <div class="form-floating mb-3">
                 <input
-                  class="form-control"
+                 class="form-control grouping-inputs border-bottom"
                   id="floatingInput"
                   type="text"
                   name="category"
@@ -181,19 +185,19 @@ const Productcrud = ({ event }) => {
                 ></input>
                 <label for="floatingInput">Category</label>
               </div>
-              {error.category && (
+               
                 <p
-                  style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}
+                  style={{ color: "red", fontSize: "12px", fontWeight: "bold",visibility: error.category ? "visible" : "hidden" }}
                 >
-                  {error.category}
+                  {error.category || " "}
                 </p>
-              )}
+              
             </div>
           </div>
         </div>
         <div class="form-floating mb-3">
           <input
-            class="form-control"
+            class="form-control grouping-inputs border-bottom "
             id="floatingInput"
             type="text"
             name="image"
@@ -203,11 +207,11 @@ const Productcrud = ({ event }) => {
           ></input>
           <label for="floatingInput">Image URL</label>
         </div>
-        {error.image && (
-          <p style={{ color: "red", fontSize: "12px", fontWeight: "bold" }}>
-            {error.image}
+       
+          <p className="m-0" style={{ color: "red", fontSize: "12px", fontWeight: "bold", visibility: error.image ? "visible" : "hidden" }}>
+            {error.image || " "}
           </p>
-        )}
+        <div className="buttonalign">
         <button type="submit">
           <div
             class={loading ? "spinner-border text-primary" : "none"}
@@ -216,6 +220,8 @@ const Productcrud = ({ event }) => {
             {!product ? "Add" : "Update"}
           </div>
         </button>
+        <button className="backicon" onClick={handleback}>&larr;Back</button>
+        </div>
       </div>
     </form>
   );

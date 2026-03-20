@@ -29,6 +29,7 @@ const Login = () => {
   return (
     <main>
     <form onSubmit={handlesubmit}>
+        <div className='formalign'>
         <div className='form-card'>
         <label>Email</label>
     <input type='email' className='email' value={email} onChange={(e)=>setEmail(e.target.value)}  placeholder='Enter a Email'></input>
@@ -36,6 +37,7 @@ const Login = () => {
     <input type='password' className='password' value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Enter a Password'></input>
    <p className='errorshow'>{error}</p> 
     <button type='submit'>LOGIN</button>
+    </div>
     </div>
     </form>
     </main>
