@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "images": {
+    "img1": "https://www.petlers.com/wp-content/uploads/2024/11/1506_front.png",
+    "img2": "https://www.petlers.com/wp-content/uploads/2024/11/1506_front.png",
+    "img3": "https://www.petlers.com/wp-content/uploads/2024/11/1506_front.png",
+    "img4": "https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+  },
+  "title": "Breed Dry Dog Food",
+  "content": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+  "price": "100",
+  "size":["XS","S","M","L","XL"],
+  "rating": {
+    "rate": 3.9,
+    "count": 120,
+    "stocks": "in Stock"
+  },
+  "colors": ["yellow", "red"]
+}

@@ -1,4 +1,73 @@
 @media (min-width: 320px) {
+    .ecom-navbarsplit ul li a {
+    text-decoration: none;
+    padding-right: 50px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .ecom-navbarsplit strong {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3%;
+  }
+  .ecom-navbarsplit ul li a:focus {
+    text-decoration: underline;
+  }
+  .favourite {
+    display: flex;
+    padding-left: 10px;
+    gap: 30px;
+  }
+  .inputs svg {
+    width: 30px;
+    height: 25px;
+  }
+  .inputs {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .ecom-navbarsplit input {
+    border: none;
+    background-color: transparent;
+    width: 125px;
+    height: 25px;
+  }
+  .ecom-navbarsplit input::placeholder{
+    font-size: 12px;
+  }
+  .inputsplit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 3px 9px 3px 15px;
+    background-color: #f5f5f5;
+    border: none;
+    gap: 10px;
+  }
+  .ecom-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 10px 0;
+    border-bottom: 1px solid black;
+  }
+  .ecom-navbarsplit {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+  }
+  .ecom-navbarsplit ul li {
+    list-style-type: none;
+  }
+  .ecom-navbarsplit ul {
+    display: flex;
+  }
   .ecom-navbarsplit ul li a {
     display: none;
   }

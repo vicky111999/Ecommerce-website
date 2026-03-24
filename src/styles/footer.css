@@ -75,7 +75,7 @@
   align-items: center;
   gap: 10px;
 }
-.downloader{
+.downloader {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -95,4 +95,11 @@
   background-color: transparent;
   cursor: pointer;
   z-index: 99;
+}
+@media (min-width: 320px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 70px 10px 10px 10px;
+  }
 }

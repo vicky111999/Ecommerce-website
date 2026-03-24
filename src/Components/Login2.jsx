@@ -9,7 +9,6 @@ const Login2 = () => {
         email: "",
         password: "",
       });
-    
       // const api = import.meta.env.VITE_API_URL
     
       const handlechange = (e) => {
@@ -17,6 +16,10 @@ const Login2 = () => {
           ...formdata,
           [e.target.name]: e.target.value,
         });
+        setError({
+          ...error,
+          [e.target.name] : ''
+        })
       };
       const handlesubmit = async (e) => {
         e.preventDefault();
@@ -25,32 +28,6 @@ const Login2 = () => {
         setLoading(true);
         if (!formdata?.email) newerror.email = "Email or phone Number required";
         if (!formdata?.password) newerror.password = "Password is required";
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
-         if( formdata?.email && !isNaN(formdata?.email)){
-          if(formdata?.email.length !== 10 )
-          {
-            newerror.email = "10 digit phone Number needed"
-          }
-         }
-         else{
-          if(formdata?.email && !formdata?.email.includes('@')) newerror.email = 'Email is include @ and required form'
-         }
-         if(!passwordRegex.test(formdata?.password))
-         {
-          newerror.password = 'Atleast 8 characters '
-         }
-        // const Isphone = /^[0-9]+$/;
-        // const Isemail = /^[^\s@]+@[^\s@]+\.[^\s@]$/
-        // if(Isphone.test(formdata?.email)){
-        //   console.log(formdata?.email.length !== 10)
-        //   if(formdata?.email.length !== 10)
-        //     console.log("error")
-        //   newerror.email = "10 digit phone Number needed"
-        // }
-        // else if(!Isemail.test(formdata?.email))
-        // {
-        //   newerror.email = 'Email is include @ and required form'
-        // }
         if (Object.keys(newerror).length > 0) {
           setError(newerror);
           setLoading(false)
@@ -62,8 +39,8 @@ const Login2 = () => {
             headers: { "Content-Type": "application/json" },
           });
           
-          if (!response.ok && response.status == '400') toast.error (`HTTP SERVER : ${response.status}`)
-          if(response.ok && response.status === '200' ) toast.success( "Successfully Signedup")
+          if (!response.ok && response.status == 400) toast.error (`HTTP SERVER : ${response.status}`)
+          if(response.ok && response.status === 200 ) toast.success( "Successfully Signedup")
           if(!response.ok && response.status ) toast.error('Unexpected Error')
           
         } catch (err) {
@@ -72,6 +49,7 @@ const Login2 = () => {
           setLoading(false);
         }
       };
+
   return (
     <>
       <form onSubmit={handlesubmit}>

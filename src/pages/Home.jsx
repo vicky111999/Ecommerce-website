@@ -240,7 +240,6 @@ const Home = () => {
             title={"Best Selling Products"}
             rightcomponent={
               <>
-                {" "}
                 <Button
                   item={"View All"}
                   classname={"viewall"}

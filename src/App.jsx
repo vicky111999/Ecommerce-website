@@ -12,16 +12,14 @@ import Updateproduct from "./pages/Updateproduct.jsx";
 import { ToastContainer } from "react-toastify";
 import Login2 from "./Components/Login2.jsx";
 import Usersign from "./pages/Usersign.jsx";
+import Notfound from "./Components/Notfound.jsx";
+import Singleproducts from "./pages/Singleproducts.jsx";
 
 const App = () => {
   return (
     <>
-    <ToastContainer/>
+      <ToastContainer />
       <Routes>
-        <Route path="/login" element={<Login />}></Route>
-         
-        <Route path="/login2" element={<Login2/>}></Route>
-        <Route path="*" element={<Login/>}></Route>
         <Route
           path="/"
           element={
@@ -30,7 +28,10 @@ const App = () => {
             </Protectedroute>
           }
         >
-           <Route path="/signup" element={<Usersign/>}></Route>
+          <Route path="/login" element={<Usersign />}></Route>
+          <Route path="*" element={<Notfound />}></Route>
+          <Route path="/signup" element={<Usersign />}></Route>
+          <Route path="/singleproduct" element={<Singleproducts/>}></Route>
           <Route path="/addproduct" element={<Addproduct />}></Route>
           <Route path="/updateproduct/:id" element={<Updateproduct />}></Route>
           <Route index element={<Home />}></Route>

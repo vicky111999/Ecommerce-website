@@ -8,11 +8,26 @@
   text-align: center;
   border-radius: 3%;
 }
+.viewbtn-contact{
+  padding: 12px 40px;
+    background-color: var(--orange-color);
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--lightwhite-color);
+  text-align: center;
+  border-radius: 4px;
+}
 .alignbtn {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
+}
+.alignbtnview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .alignbtn1 {
   display: flex;
