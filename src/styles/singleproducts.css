@@ -1,0 +1,53 @@
+.single-qtycount input {
+  border: 2px solid rgb(226, 220, 220);
+}
+.single-qtycount button:first-child {
+  border: 2px solid rgb(226, 220, 220);
+  border-right: none;
+  font-weight: 400;
+  border-radius: 4px 0 0 4px;
+  background-color: transparent;
+  width: 35px;
+  height: 45px;
+}
+.single-qtycount button:last-child {
+  border: 2px solid rgb(226, 220, 220);
+  border-left: none;
+  font-weight: 400;
+  background-color: transparent;
+  border-radius: 0 4px 4px 0;
+  width: 35px;
+  height: 45px;
+}
+.single-qtycount button:hover {
+  background-color: #db4444;
+  color: #fafafa;
+}
+.single-qtycount input:focus {
+  outline: none;
+}
+.single-qtycount input {
+  width: 75px;
+  height: 45px;
+  font-weight: 300;
+  text-align: center;
+}
+.single-qtycount {
+    display: flex;
+    align-items: center;
+}
+/* .singleproduct-main {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 60px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 100px;
+}
+.singleproduct-img {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+} */

@@ -9,6 +9,10 @@
   "title": "Breed Dry Dog Food",
   "content": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
   "price": "100",
+  "delivery":"Free Delivery",
+  "position":"Enter your postal code for Delivery Availability",
+  "return" : "Return Delivery",
+  "returnposition":"Free 30 Days Delivery Returns. Details",
   "size":["XS","S","M","L","XL"],
   "rating": {
     "rate": 3.9,

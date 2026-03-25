@@ -20,6 +20,8 @@ const App = () => {
     <>
       <ToastContainer />
       <Routes>
+          <Route path="/login" element={<Usersign />}></Route>
+          <Route path="/signup" element={<Usersign />}></Route>
         <Route
           path="/"
           element={
@@ -28,16 +30,14 @@ const App = () => {
             </Protectedroute>
           }
         >
-          <Route path="/login" element={<Usersign />}></Route>
-          <Route path="*" element={<Notfound />}></Route>
-          <Route path="/signup" element={<Usersign />}></Route>
-          <Route path="/singleproduct" element={<Singleproducts/>}></Route>
-          <Route path="/addproduct" element={<Addproduct />}></Route>
-          <Route path="/updateproduct/:id" element={<Updateproduct />}></Route>
           <Route index element={<Home />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/products/:id" element={<SingleCard />} />
+          <Route path="singleproduct" element={<Singleproducts/>}></Route>
+          <Route path="addproduct" element={<Addproduct />}></Route>
+          <Route path="updateproduct/:id" element={<Updateproduct />}></Route>
+          <Route path="contact" element={<Contact />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="products/:id" element={<SingleCard />} />
+          <Route path="*" element={<Notfound />}></Route>
         </Route>
       </Routes>
     </>
