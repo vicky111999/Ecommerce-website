@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login2 = () => {
@@ -9,8 +9,9 @@ const Login2 = () => {
         email: "",
         password: "",
       });
-      // const api = import.meta.env.VITE_API_URL
-    
+      const api = import.meta.env.VITE_API_URL
+     const navigate = useNavigate()
+
       const handlechange = (e) => {
         setFormdata({
           ...formdata,
@@ -34,22 +35,25 @@ const Login2 = () => {
           return;
         }
         try {
-          const response = await fetch(`/`, {
+          const response = await fetch(`${api}/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
+            body:JSON.stringify(formdata)
           });
           
           if (!response.ok && response.status == 400) toast.error (`HTTP SERVER : ${response.status}`)
-          if(response.ok && response.status === 200 ) toast.success( "Successfully Signedup")
           if(!response.ok && response.status ) toast.error('Unexpected Error')
-          
+          if(response.ok && response.status === 200 ) {
+          const data = await response.json()
+        localStorage.setItem("user",data.Isemail[0].id)
+          }
+           navigate('/')
         } catch (err) {
-          console.log(err);
+          console.log(err.message);
         } finally {
           setLoading(false);
         }
       };
-
   return (
     <>
       <form onSubmit={handlesubmit}>

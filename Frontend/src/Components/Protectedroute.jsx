@@ -1,6 +1,5 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
-import Layout from "./Layout";
+import { Navigate} from "react-router-dom";
 
 const Protectedroute = ({children}) => {
   const user = localStorage.getItem('user');

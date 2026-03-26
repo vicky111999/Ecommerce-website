@@ -1,0 +1,20 @@
+.breadcrumb-main{
+    padding:  70px 0 0 80px;
+}
+.breadcrumb-main a{
+    text-decoration: none;
+    font: 18px ;
+    color: #000;
+    font-weight: 500;
+    opacity: 0.5;
+    padding-right: 10px;
+}
+.breadcrumb-name{
+    font-size: 18px ;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.breadcrumb-slash{
+    font-size: 13px;
+    font-weight: 300;
+}

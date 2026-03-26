@@ -12,7 +12,7 @@ const Signup = () => {
     email: "",
     password: "",
   });
-  // const api = import.meta.env.VITE_API_URL
+  const api = import.meta.env.VITE_API_URL
 
   const handlechange = (e) => {
     setFormdata({
@@ -63,14 +63,13 @@ const Signup = () => {
       setLoading(false);
       return;
     }
-    console.log("hi")
     try {
-      const response = await fetch("", {
+      console.log(formdata)
+      const response = await fetch(`${api}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body:JSON.stringify(formdata)
       });
-        console.log(response)
       if (!response.ok && response.status == 400)
         toast.error(`HTTP SERVER : ${response.status}`);
       if (response.ok && response.status === 200)
