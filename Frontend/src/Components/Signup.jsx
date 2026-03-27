@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/signup.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Googleicon } from "./Svgcom";
 
@@ -12,7 +12,8 @@ const Signup = () => {
     email: "",
     password: "",
   });
-  const api = import.meta.env.VITE_API_URL
+  const navigate = useNavigate()
+  const api = import.meta.env.VITE_API_URL;
 
   const handlechange = (e) => {
     setFormdata({
@@ -45,15 +46,15 @@ const Signup = () => {
       if (formdata?.email && !emailRegex.test(formdata?.email))
         newerror.email = "Invalid Email format";
     }
-    if (formdata?.password) { 
-    if (!passwordRegexUppercase.test(formdata?.password)) {
+    if (formdata?.password) {
+      if (!passwordRegexUppercase.test(formdata?.password)) {
         newerror.password = "Must includes uppercase";
       } else if (!passwordRegexLowercase.test(formdata?.password)) {
         newerror.password = "Must includes lowercase";
       } else if (!passwordRegexdigit.test(formdata?.password)) {
         newerror.password = "Must includes number";
-      } else if(!passwordRegexSymbol.test(formdata?.password)){
-        newerror .password = "Must includes symbol"
+      } else if (!passwordRegexSymbol.test(formdata?.password)) {
+        newerror.password = "Must includes symbol";
       } else if (formdata?.password.length < 8) {
         newerror.password = "Atleast 8 characters";
       }
@@ -64,16 +65,21 @@ const Signup = () => {
       return;
     }
     try {
-      console.log(formdata)
       const response = await fetch(`${api}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body:JSON.stringify(formdata)
+        body: JSON.stringify(formdata),
       });
-      if (!response.ok && response.status == 400)
-        toast.error(`HTTP SERVER : ${response.status}`);
-      if (response.ok && response.status === 200)
+      if (!response.ok && response.status == 409) {
+        const res = await response.json();
+        newerror.email = res.message;
+        return setError(newerror);
+      }
+      if (response.ok && response.status === 200){
         toast.success("Successfully Signedup");
+        navigate('/login')
+      }
+
       if (!response.ok && response.status) toast.error("Unexpected Error");
     } catch (err) {
       console.log(err);

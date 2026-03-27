@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Navigate, Route, Router, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Signup from "./Components/Signup.jsx";
 import Home from "./pages/Home.jsx";
@@ -16,11 +16,12 @@ import Notfound from "./Components/Notfound.jsx";
 import Singleproducts from "./pages/Singleproducts.jsx";
 
 const App = () => {
+  const user = localStorage.getItem('user')
   return (
     <>
       <ToastContainer />
       <Routes>
-          <Route path="/login" element={<Usersign />}></Route>
+          <Route path="/login" element={!user ? <Usersign /> : <Navigate to='/'/>}></Route>
           <Route path="/signup" element={<Usersign />}></Route>
         <Route
           path="/"

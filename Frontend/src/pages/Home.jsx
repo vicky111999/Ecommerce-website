@@ -24,7 +24,7 @@ import ProductList from "../Components/ProductList.jsx";
 const Home = () => {
   const [timer, setTimer] = useState({ d: 0, h: 0, m: 0, s: 0 });
   const [clothes, setClothes] = useState([]);
-  const api = import.meta.env.VITE_API_URL;
+  // const api = import.meta.env.VITE_API_URL;
   const Timer = () => {
     return (
       <>
@@ -60,11 +60,11 @@ const Home = () => {
     }, 1000);
   }, []);
   useEffect(() => {
-    fetch(`${api}/products`)
+    fetch(`https://fakestoreapi.com/products`)
       .then((res) => res.json())
       .then((data) => setClothes(data))
-      .catch((err) => console.log(err.message));
-  }, [api]);
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <main>
